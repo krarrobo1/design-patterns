@@ -11,7 +11,7 @@ Hoy en día existen un sin numero de patrones de diseño, debido a la necesidad 
 
 Acontinuación detallaremos cada uno de ellos junto con ejemplos de los patrones más comunes en su categoría
 
-## Patrones Creacionales
+# Patrones Creacionales
 
 Los patrones creacionales proporcionan varios mecanismos de creación de objetos que incrementan la flexibilidad y la reutilización del código existente.
 
@@ -69,11 +69,11 @@ Mediante el método `Object.create` podemos clonar instancias de ese objeto de m
 
 Para ver la implementación completa puedes revisar el archivo: ***javascript/prototype.js***  en el repositorio.
 
-## Patrones estructurales
+# Patrones estructurales
 
 Estos patrones explican cómo ensamblar objetos y clases en estructuras más grandes, mientras se mantiene la flexibilidad y eficiencia de la estructura.
 
-# Patrón Adapter
+## Patrón Adapter
 
 Adapter es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles.
 
@@ -84,11 +84,6 @@ Imaginemos que tenemos 2 Apis en nuestro proyecto, por alguna razon que ignoramo
 Para resolver esta problemática crearemos un adaptador que nos permita envolver la Api 2
 
 ```
-/**
- * Patron Adaptader
- * El patrón adaptador se utiliza para transformar una interfaz en otra, de tal modo que una clase que no pueda utilizar la primera haga uso de ella a través de la segunda.
- */
-
 // Api 1
 class Api {
     constructor() {
@@ -148,7 +143,7 @@ const adapter = new ApiAdapter();
 adapter.operations('www.google.com', { q: 1 }, 'get');
 ```
 
-# Patrón Facade
+## Patrón Facade
 
 El patrón Facade disminuye la complejidad general de la aplicación, al mismo tiempo que ayuda a mover dependencias no deseadas a un solo lugar.
 
@@ -211,11 +206,11 @@ class Facturacion:
         pass
 ```
 
-## Patrones de comportamiento
+# Patrones de comportamiento
 
 Estos patrones tratan con algoritmos y la asignación de responsabilidades entre objetos.
 
-# Patrón Mediator
+## Patrón Mediator
 
 Mediator es un patrón de diseño de comportamiento que te permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador.
 
@@ -238,7 +233,7 @@ Emitter.emit('comandoDeVozEncendido', 'sala');
 Emitter.emit('comandoDeVozApagado', 'dormitorio');
 ```
 
-# Patron comando
+## Patron comando
 
 Command es un patrón de diseño de comportamiento que convierte solicitudes u operaciones simples en objetos.
 
